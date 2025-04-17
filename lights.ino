@@ -10,10 +10,10 @@ BH1750 LightSensor_1; // экземпляры пяти датчиков осве
 BH1750 LightSensor_2;
 BH1750 LightSensor_3;
 BH1750 LightSensor_4;
-const char* ssid = "Wi-Fi"; // Замените на вашу сеть
-const char* password = "password"; // Замените на ваш пароль
+const char* ssid = "TP-Link_4F90"; // Замените на вашу сеть
+const char* password = "NTOContest202324"; // Замените на ваш пароль
 WiFiUDP udp;
-const char* udpServerIP = "192.168.66.240"; // IP приёмника
+const char* udpServerIP = "192.168.0.102"; // IP приёмника
 const uint16_t udpPort = 8000;
 
 bool state1 = false;
@@ -100,73 +100,73 @@ void setup() {
     testModule3.begin();
     setBusChannel(0x07);
   LightSensor_4.begin();
-//setBusChannel(0x04);
-//    for (int channel = 0; channel < testModule.channelCount(); channel++)
-//  {
-//    setBusChannel(0x04);
-//    testModule.setLedDriverMode(channel, PCA9634_LEDON);
-//    Serial.println(channel);
-//    delay(500);
-//    setBusChannel(0x04);
-//    testModule.setLedDriverMode(channel, PCA9634_LEDOFF);
-//    delay(500);
-//  }
-//  setBusChannel(0x04);
-//  for (int channel = 0; channel < testModule.channelCount(); channel++)
-//  {
-//    testModule.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
-//  }
-//    setBusChannel(0x05);
-//    for (int channel = 0; channel < testModule1.channelCount(); channel++)
-//  {
-//    setBusChannel(0x05);
-//    testModule1.setLedDriverMode(channel, PCA9634_LEDON);
-//    Serial.println(channel);
-//    delay(500);
-//    setBusChannel(0x05);
-//    testModule1.setLedDriverMode(channel, PCA9634_LEDOFF);
-//    delay(500);
-//  }
-//  setBusChannel(0x05);
-//  for (int channel = 0; channel < testModule1.channelCount(); channel++)
-//  {
-//    setBusChannel(0x05);
-//    testModule1.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
-//  }
-//  setBusChannel(0x06);
-//    for (int channel = 0; channel < testModule2.channelCount(); channel++)
-//  {
-//    setBusChannel(0x06);
-//    testModule2.setLedDriverMode(channel, PCA9634_LEDON);
-//    Serial.println(channel);
-//    delay(500);
-//    setBusChannel(0x06);
-//    testModule2.setLedDriverMode(channel, PCA9634_LEDOFF);
-//    delay(500);
-//  }
-//  setBusChannel(0x06);
-//  for (int channel = 0; channel < testModule2.channelCount(); channel++)
-//  {
-//    setBusChannel(0x06);
-//    testModule2.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
-//  }
-//  setBusChannel(0x07);
-//    for (int channel = 0; channel < testModule3.channelCount(); channel++)
-//  {
-//    setBusChannel(0x07);
-//    testModule3.setLedDriverMode(channel, PCA9634_LEDON);
-//    Serial.println(channel);
-//    delay(500);
-//    setBusChannel(0x07);
-//    testModule3.setLedDriverMode(channel, PCA9634_LEDOFF);
-//    delay(500);
-//  }
-//  setBusChannel(0x07);
-//  for (int channel = 0; channel < testModule3.channelCount(); channel++)
-//  {
-//    setBusChannel(0x07);
-//    testModule3.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
-//  }
+setBusChannel(0x04);
+   for (int channel = 0; channel < testModule.channelCount(); channel++)
+ {
+   setBusChannel(0x04);
+   testModule.setLedDriverMode(channel, PCA9634_LEDON);
+   Serial.println(channel);
+   delay(500);
+   setBusChannel(0x04);
+   testModule.setLedDriverMode(channel, PCA9634_LEDOFF);
+   delay(500);
+ }
+ setBusChannel(0x04);
+ for (int channel = 0; channel < testModule.channelCount(); channel++)
+ {
+   testModule.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
+ }
+   setBusChannel(0x05);
+   for (int channel = 0; channel < testModule1.channelCount(); channel++)
+ {
+   setBusChannel(0x05);
+   testModule1.setLedDriverMode(channel, PCA9634_LEDON);
+   Serial.println(channel);
+   delay(500);
+   setBusChannel(0x05);
+   testModule1.setLedDriverMode(channel, PCA9634_LEDOFF);
+   delay(500);
+ }
+ setBusChannel(0x05);
+ for (int channel = 0; channel < testModule1.channelCount(); channel++)
+ {
+   setBusChannel(0x05);
+   testModule1.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
+ }
+ setBusChannel(0x06);
+   for (int channel = 0; channel < testModule2.channelCount(); channel++)
+ {
+   setBusChannel(0x06);
+   testModule2.setLedDriverMode(channel, PCA9634_LEDON);
+   Serial.println(channel);
+   delay(500);
+   setBusChannel(0x06);
+   testModule2.setLedDriverMode(channel, PCA9634_LEDOFF);
+   delay(500);
+ }
+ setBusChannel(0x06);
+ for (int channel = 0; channel < testModule2.channelCount(); channel++)
+ {
+   setBusChannel(0x06);
+   testModule2.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
+ }
+ setBusChannel(0x07);
+   for (int channel = 0; channel < testModule3.channelCount(); channel++)
+ {
+   setBusChannel(0x07);
+   testModule3.setLedDriverMode(channel, PCA9634_LEDON);
+   Serial.println(channel);
+   delay(500);
+   setBusChannel(0x07);
+   testModule3.setLedDriverMode(channel, PCA9634_LEDOFF);
+   delay(500);
+ }
+ setBusChannel(0x07);
+ for (int channel = 0; channel < testModule3.channelCount(); channel++)
+ {
+   setBusChannel(0x07);
+   testModule3.setLedDriverMode(channel, PCA9634_LEDPWM); // установка режима ШИМ (0-255)
+ }
 }
 void loop() {
   // Считывание датчиков
@@ -269,7 +269,7 @@ void loop() {
   
   Serial.println("-------------------------------------------------------");
   Serial.println("Ambient light intensity 1: " + String(light1, 1) + " lx");
-  Serial.println("Ambient light intensity 2: " + String(light2, 1) + " lx");
+  Serial.println("Ambient light intensity 2: " + String(light2, 1) + " lx");  
   Serial.println("Ambient light intensity 3: " + String(light3, 1) + " lx");
   Serial.println("Ambient light intensity 4: " + String(light3, 1) + " lx");
   delay(1000);
@@ -279,15 +279,15 @@ void loop() {
 
 //udp.begin(listenPort);
 
-//void loop() {
+// void loop() {
 //  int packetSize = udp.parsePacket();
 //  if (packetSize == sizeof(Data)) {
 //    Data receivedData;
 //    udp.read((uint8_t*)&receivedData, sizeof(Data));
-//
+
 //    // Теперь можно использовать receivedData
 //    Serial.print("State1: "); Serial.println(receivedData.state1);
 //    Serial.print("Light1: "); Serial.println(receivedData.light1);
 //    // и так далее
 //  }
-//}
+// }
