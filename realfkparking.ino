@@ -43,11 +43,14 @@ void setup() {
   Serial.print(WiFi.localIP());
 }
 
+bool fire = false;
+
 struct Data {
   bool occupied;
   byte level;
   int len;
   bool water;
+  bool fire;
 };
 
 Data toSend;
@@ -94,6 +97,7 @@ void loop() {
   toSend.level = progress;
   toSend.len = dist;
   toSend.water = (h>30);
+  toSend.fire = (visib>=8000);
   Serial.println(WiFi.localIP());
   if (WiFi.status() == WL_CONNECTED) {
     udp.beginPacket(udpServerIP, udpPort);
